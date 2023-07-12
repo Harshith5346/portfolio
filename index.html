@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f64f4e6d21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+        <nav>
+            <img src="/portfolio/images/logo.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">MySkills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Heya, I'm <span>Sahu</span> <br>Srikanth from Vizag</h1>
+        </div>
+    </div>
+ </div> 
+ <!-------------about---------->
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="/portfolio/images/user.jpeg">
+            </div>      
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <br>
+                <br>
+                <p>Hello, I'm Sahu Sai Srikanth, a passionate computer science student 
+                    currently pursuing my B.Tech degree at Gayatri Vidya Parishad College.
+                     With a keen interest in technology and a drive to explore the world 
+                     of computers, I am dedicated to honing my skills and expanding my 
+                     knowledge in the field of computer science.Apart from my studies, 
+                     I actively engage in personal projects and participate in coding 
+                     competitions, which have helped me apply my theoretical knowledge 
+                     to practical scenarios. The challenges I've encountered and overcome 
+                     have only fueled my passion for computer science and reinforced my 
+                     determination to excel in this dynamic field.
+                </p>
+                <br>
+                <br>
+                  <div class="tab-titles">
+                       <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> 
+                       <p class="tab-links" onclick="opentab('education')">Education</p>                
+                  </div>
+                  <div class="tab-contents active-tab"  id="skills ">
+                    <ul>
+                        <li><span>Web Development</span><br>Designing and developing website</li>
+                        <li><span>Python</span><br>Problem solving and competitive coding</li>
+                        <li><span>Sql</span><br>Database Management using SQL </li>
+                    </ul>
+                  </div>
+                  <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.Tech</span><br>Gayatri Vidya Parishad College for Degree and PG Courses(A)</li>
+                        <li><span>Intermediate(+2)</span><br>Sri Gayatri Junior College</li>
+                        <li><span>Matriculation</span><br>V.T.High School </li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!--------------Myskills---------------->
+  <div id="skills">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <br>
+                    <p>Web Development is my passion, where creativity meets functionality. 
+                        With expertise in HTML, CSS, and JavaScript, I bring ideas to life 
+                        on the digital canvas. From responsive designs to seamless user 
+                        experiences, I craft websites that leave a lasting impression.</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python</h2>
+                    <br>
+                    <p>Python is my programming language of choice, enabling me to solve complex 
+                        problems with elegance and efficiency.Python empowers me to create robust 
+                        and versatile solutions. With a strong grasp of libraries and frameworks, 
+                        I utilize Python's flexibility to deliver innovative and impactful projects.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>SQL</h2>
+                    <br>
+                    <p>SQL is my database management superpower, allowing me to handle vast amounts 
+                        of data with precision and speed. With expertise in querying, analyzing, and 
+                        optimizing databases, I ensure seamless data integration and retrieval. From 
+                        designing efficient schemas to crafting complex queries, I harness the power 
+                        of SQL to deliver robust and scalable data solutions for a variety of applications.</p>
+                </div>
+        </div>
+    </div>
+  </div>
+  <!------------------------contact----------------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-titile">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>sahu.srikanth.2002@gmail.com</p>     
+                <p><i class="fa-sharp fa-solid fa-phone-volume"></i>9063968230</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sahu-sai-srikanth/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:sahu.srikanth.2002@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+919063968230"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Type your message"> </textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © SAHU SRIKANTH. </p>
+    </div>
+  </div>
+  <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <script>
+    var sidemenu=document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyNMQG8FTniavro3XGeSfS8nV2tvc74Q0lzChS1QEMUM4gbXGfsWb3aPZhQNYWeKTry/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
